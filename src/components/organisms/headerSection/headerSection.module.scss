@@ -1,0 +1,49 @@
+@import '../../../styles.scss';
+
+.hsSection {
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+        ),
+        url('https://raystrash.com/wp-content/uploads/2015/10/RKC_3601-Version-2-1202x800.jpg');
+}
+
+.hsContainer {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.title {
+    font-family: $primaryFont;
+    color: $primaryGreenTone2;
+    text-align: left;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.subtitle {
+    font-family: $secondaryFont;
+    color: white;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.seeMoreBtn {
+    font-family: $primaryFont;
+    border-radius: 60px;
+    border: none;
+    width: 100%;
+    height: 48px;
+    font-weight: bold;
+    color: $primaryGreenTone2;
+    background-color: white;
+}
+
+.seeMoreBtn:hover {
+    background-color: $primaryGreenTone2;
+    color: white;
+}

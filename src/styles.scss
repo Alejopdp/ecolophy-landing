@@ -1,0 +1,27 @@
+// Colors
+$primaryGreenTone1: #D2E28D;
+$primaryGreenTone2: #AABC61;
+$primaryGreenTone3: #7E8E3D;
+$primaryGreenTone4: #616B29;
+$textFirstColor: #707070;
+$textSecondColor: #909090;
+$backgroundColor: #FAFAFA;
+
+// Fonts
+$primaryFont: 'Arvo', sans-serif;
+$secondaryFont: 'Open Sans', sans-serif;
+
+:export {
+    // Colors
+    primaryGreenTone1: $primaryGreenTone1;
+    primaryGreenTone2: $primaryGreenTone2;
+    primaryGreenTone3: $primaryGreenTone3;
+    primaryGreenTone4: $primaryGreenTone4;
+    textFirstColor: $textFirstColor;
+    textSecondColor: $textSecondColor;
+    backgroundColor: $backgroundColor;
+
+    // Fonts
+    primaryFont: $primaryFont;
+    secondaryFont: $secondaryFont;
+}

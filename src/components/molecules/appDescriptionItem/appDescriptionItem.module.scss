@@ -1,0 +1,32 @@
+@import '../../../styles.scss';
+
+.appDescriptionItemContainer {
+    padding: 0px 24px 0px 24px;
+}
+
+.title {
+    font-family: $primaryFont;
+    color: $primaryGreenTone2;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px 0px 8px 0px;
+}
+
+.text {
+    font-family: $secondaryFont;
+    color: $textFirstColor;
+    font-size: 16px;
+    text-align: center;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 16px;
+}
+
+.imgParticularProblem {
+    width: 80px;
+}

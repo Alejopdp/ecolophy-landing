@@ -1,0 +1,10 @@
+@import '../../../styles.scss';
+
+.text {
+    font-family: $primaryFont;
+    color: $textFirstColor;
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+}

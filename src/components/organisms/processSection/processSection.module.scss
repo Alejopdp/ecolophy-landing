@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+
+.psSection {
+
+}
+
+.psContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

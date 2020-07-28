@@ -1,0 +1,30 @@
+@import '../../../styles.scss';
+
+.bsSection {
+    background-color: $primaryGreenTone2;
+}
+
+.bsContainer {
+    min-height: 300px;
+    width: 100%;
+}
+
+.rowContainer {
+    min-height: 300px;
+    align-content: center;
+}
+
+.firstText {
+    font-family: $secondaryFont;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.secondText {
+    font-family: $primaryFont;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+}

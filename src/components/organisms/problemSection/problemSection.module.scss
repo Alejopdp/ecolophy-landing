@@ -1,0 +1,44 @@
+@import '../../../styles.scss';
+
+.psSection {
+}
+
+.psContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.problemFirstText {
+    font-family: $primaryFont;
+    color: $textFirstColor;
+    font-size: 32px;
+}
+
+.problemSecondText {
+    font-family: $primaryFont;
+    color: $primaryGreenTone3;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.problemSourceText {
+    font-family: $secondaryFont;
+    color: $textSecondColor;
+    font-size: 14px;
+}
+
+.imgProblem {
+    width: 100%;
+    padding: 24px;
+}
+
+.subtitleProblem {
+    font-family: $primaryFont;
+    color: $textFirstColor;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}

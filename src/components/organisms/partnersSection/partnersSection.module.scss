@@ -1,0 +1,15 @@
+@import '../../../styles.scss';
+
+.psSection {
+background-color: white;
+}
+
+.psContainer {
+    min-height: 128px;
+    width: 100%;
+}
+
+.rowContainer {
+    min-height: 128px;
+    align-content: center;
+}
