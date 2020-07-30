@@ -1,10 +1,54 @@
 @import '../../../styles.scss';
 
-.psSection {
-    background-color: green;
+.ctaSection {
+    background:
+    linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+    ),
+    url('https://i.ibb.co/5vdyW80/bg-Call-To-Action.jpg');
 }
 
-.psContainer {
+.ctaContainer {
     min-height: 100vh;
     width: 100%;
+}
+
+.firstTitle {
+    font-family: $primaryFont;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.secondTitle {
+    font-family: $primaryFont;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.invitationText {
+    font-family: $secondaryFont;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.firstFinalTitle, .secondFinalTitle {
+    font-family: $primaryFont;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footerLogoSocialContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }

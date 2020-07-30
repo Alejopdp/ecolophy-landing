@@ -9,13 +9,47 @@ import styles from './partnersSection.module.scss'
 // React Bootstrap Components
 import { Container, Row, Col } from 'react-bootstrap';
 
+const partners = [
+    {
+        id: 1,
+        name: 'UCA',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Escudouca.jpg'
+    },
+    {
+        id: 2,
+        name: 'UCA',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Escudouca.jpg'
+    },
+    {
+        id: 3,
+        name: 'UCA',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Escudouca.jpg'
+    },
+    {
+        id: 4,
+        name: 'UCA',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Escudouca.jpg'
+    },
+    {
+        id: 5,
+        name: 'UCA',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Escudouca.jpg'
+    },
+    {
+        id: 6,
+        name: 'UCA',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Escudouca.jpg'
+    },
+]
 
 const PartnersSection = props => {
     return (
         <section className={styles.psSection}>
             <Container className={styles.psContainer}>
                 <Row className={styles.rowContainer}>
-                    <p>Partners Section</p>
+                    {partners.map((partner, key) => {
+                        return <img key={key} src={partner.img} alt={partner.name} style={{ width: '80px', height: '80px' }}/>
+                    })}
                 </Row>
             </Container>
         </section>
