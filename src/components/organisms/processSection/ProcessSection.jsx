@@ -5,7 +5,8 @@ import styles from './processSection.module.scss'
 
 // Internal Components
 import Title from '../../atoms/title/Title';
-import ProcessStepsContainer from '../../molecules/processStepsContainer/ProcessStepsContainer';
+import ProcessContainerDesktop from '../../molecules/processContainer/processContainerDesktop/ProcessContainerDesktop';
+import ProcessContainerMobile from '../../molecules/processContainer/processContainerMobile/ProcessContainerMobile';
 
 // React Bootstrap Components
 import { Container, Row, Col } from 'react-bootstrap';
@@ -56,9 +57,12 @@ const ProcessSection = props => {
                             <Title text='¿Cómo es el proceso?' />
                         </Col>
                     </Row>
-                    <Row>
-                        <ProcessStepsContainer steps={processSteps} />
+                    <Row className='d-none d-md-flex'>
+                        <ProcessContainerDesktop steps={processSteps} />
                     </Row>
+                    {/* <Row className='d-flex d-md-none'>
+                        <ProcessContainerMobile steps={processSteps} />
+                    </Row> */}
                 </div>
             </Container>
         </section>

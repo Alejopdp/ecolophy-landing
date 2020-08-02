@@ -43,3 +43,26 @@
     font-size: 24px;
     text-align: center;
 }
+
+.imgProblemContainer {
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+
+
+@media (max-width: 576px) { 
+    .problemFirstText {
+        font-size: 18px;
+    }
+    .problemSecondText {
+        font-size: 24px;
+    }
+    .subtitleProblem {
+        font-size: 20px;
+    }
+    .psContainer {
+        min-height: fit-content;
+        padding: 40px 0px;
+    }
+}

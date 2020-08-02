@@ -14,12 +14,13 @@
 }
 
 .stepNumber {
-    font-size: 20px;
+    font-family: $primaryFont;
+    font-size: 18px;
 }
 
 .title {
     font-family: $primaryFont;
-    color: $primaryGreenTone3;
+    color: $primaryGreenTone2;
     font-size: 18px;
     text-align: center;
     text-transform: uppercase;

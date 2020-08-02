@@ -20,7 +20,7 @@ const CustomButton = props => {
             break;
     }
 
-    return <button className={classes} type="button" onClick={props.handleClick}>{props.text}</button>
+    return <button className={classes} style={props.style} type="button" onClick={props.handleClick}>{props.text}</button>
 }
 
 export default CustomButton;

@@ -26,12 +26,12 @@ const CustomModal = props => {
                 <h5 className={styles.moreInfoText}>Por último, queremos saber un poco más de vos...</h5>
                 <Form>
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label className={styles.formLabel} >¿Como te llamas?</Form.Label>
+                        <Form.Label className={styles.formLabel}>¿Cual es tu nombre?</Form.Label>
                         <Form.Control className={styles.inputClass} type="text" />
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
-                        <Form.Label className={styles.formLabel}>¿En donde vives?</Form.Label>
+                        <Form.Label className={styles.formLabel}>¿En que barrio vivis?</Form.Label>
                         <Form.Control className={styles.inputClass} type="text" />
                     </Form.Group>
                     <div style={{ marginTop: '24px' }}>

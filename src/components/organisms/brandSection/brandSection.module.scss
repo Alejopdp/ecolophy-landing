@@ -28,3 +28,16 @@
     font-size: 32px;
     text-transform: uppercase;
 }
+
+
+@media (max-width: 576px) { 
+    .firstText {
+        font-size: 32px;
+    }
+    .secondText {
+        font-size: 24px;
+    }
+    .rowContainer, .bsContainer {
+        min-height: 200px;
+    }
+}

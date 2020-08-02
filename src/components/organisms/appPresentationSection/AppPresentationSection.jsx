@@ -24,12 +24,15 @@ const AppPresentationSection = props => {
                         </Col>
                     </Row>
                     <Row>
+                        <Col xs={12} md={4} className='d-flex d-md-none justify-content-center' style={{ marginBottom: '40px' }}>
+                            <Img fixed={props.appMobileImg} />
+                        </Col>
                         <Col xs={12} md={4} className={styles.appDescriptionItemContainer}>
                             <AppDescriptionItem imgSrc={props.metodologiaGreencycleImg} title='METODOLOGIA GREENCYCLE' text='En etapas de retiro y separación de material' />
                             <AppDescriptionItem imgSrc={props.sistemaIncentivosImg} title='SISTEMAS DE INCENTIVOS' text='Con las Ecobags, Ecocest & Ecopoints, el reciclaje no va a significar un costo extra.' />
                         </Col>
-                        <Col xs={12} md={4} className='d-flex justify-content-center'>
-                            <Img fixed={props.appImg} />
+                        <Col xs={12} md={4} className='d-none d-md-flex justify-content-center'>
+                            <Img fixed={props.appDesktopImg} />
                         </Col>
                         <Col xs={12} md={4} className={styles.appDescriptionItemContainer} >
                             <AppDescriptionItem imgSrc={props.tecnologiaQrImg} title='TECNOLOGÍA QR' text='Logrando una trazabilidad perfecta entre usuario y residuo.' />

@@ -24,13 +24,12 @@ const ProblemSection = props => {
                             <p className={styles.problemSourceText}>Fuente: Informe de calidad de RSU, CEAMSE-FIUBA, 2015</p>
                         </Col>
                         <Col sm={12} md={5} className='align-self-center'>
-                            <div style={{ paddingLeft: '32px' }} data-sal="fade" data-sal-delay="200" data-sal-easing="ease">
-                                <Img fixed={props.composicionResiduosImg} />
+                            <div className={styles.imgProblemContainer} data-sal="fade" data-sal-delay="200" data-sal-easing="ease">
+                                <Img className='d-none d-md-flex' fixed={props.composicionResiduosDesktopImg} />
+                                <Img className='d-flex d-md-none' fixed={props.composicionResiduosMobileImg} />
                             </div>
                         </Col>
                     </Row>
-                </div>
-                <div data-sal="fade" data-sal-delay="200" data-sal-easing="ease">
                     <Row style={{ padding: '32px 0px 32px 0px', marginTop: '32px' }}>
                         <Col>
                             <h2 className={styles.subtitleProblem}>¿POR QUÉ SE GENERA ESTA PROBLEMÁTICA?</h2>

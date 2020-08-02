@@ -11,3 +11,10 @@
     flex-direction: column;
     justify-content: center;
 }
+
+@media (max-width: 576px) { 
+    .psContainer {
+        min-height: fit-content;
+        padding: 40px 0px;
+    }
+}
