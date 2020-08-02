@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+
+.thanksTitle {
+    font-family: $primaryFont;
+    color: $primaryGreenTone3;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.thanksImgContainer {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.thanksImg {
+    width: 250px;
+}
+
+.moreInfoText {
+    font-family: $secondaryFont;
+    color: $textFirstColor;
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+.formLabel {
+    font-family: $secondaryFont;
+    color: $textFirstColor;
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.inputClass {
+    border-radius: 60px;
+    height: 40px;
+}

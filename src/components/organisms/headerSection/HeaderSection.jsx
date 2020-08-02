@@ -4,27 +4,37 @@ import styles from './headerSection.module.scss'
 
 
 // Internal Components
+import CustomButton from '../../atoms/customButton/CustomButton'
+import HeaderBgImage from '../../molecules/headerBgImage/HeaderBgImage'
 
 
-// React Bootstrap Components
-import { Container, Row, Col, Button } from 'react-bootstrap';
+// External Components
+import { Container, Row, Col } from 'react-bootstrap';
 
-// const bgImage = 'https://raystrash.com/wp-content/uploads/2015/10/RKC_3601-Version-2-1202x800.jpg'
 
 const HeaderSection = props => {
+
+    const handleClickVerMas = () => {
+        const section = document.querySelector('#problema');
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     return (
-        // <section className={styles.hsSection} style={{ backgroundImage: `url(${bgImage})` }}>
-        <section className={styles.hsSection}>
+        <HeaderBgImage imgRoute="headerSection/background.jpg">
             <Container className={styles.hsContainer}>
                 <Row className='align-items-center' style={{ minHeight: '100vh' }}>
-                    <Col xs={12} md={7}>
-                        <h1 className={styles.title}>LLEGÓ UNA NUEVA FORMA DE RECICLAR</h1>
-                        <h3 className={styles.subtitle}>Con Ecolophy, reciclar nunca fue tan fácil.</h3>
-                        <Button className={styles.seeMoreBtn}>¡QUIERO VER MÁS!</Button>
-                    </Col>
+                    <div data-sal="fade" data-sal-delay="200" data-sal-easing="ease">
+                        <Col xs={12} md={7}>
+                            <h1 className={styles.title}>LLEGÓ UNA NUEVA FORMA DE RECICLAR</h1>
+                            <h3 className={styles.subtitle}>Con Ecolophy, reciclar nunca fue tan fácil.</h3>
+                            <Col xs={12} md={6} style={{ padding: '0px' }}>
+                                <CustomButton type='secondary' text='¡QUIERO VER MÁS!' handleClick={handleClickVerMas} />
+                            </Col>
+                        </Col>
+                    </div>
                 </Row>
             </Container>
-        </section>
+        </HeaderBgImage>
     )
 }
 

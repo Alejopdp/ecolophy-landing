@@ -1,10 +1,12 @@
 // Baseline & Utils
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './callToActionSection.module.scss'
 
 
 // Internal Components
-
+import CustomModal from '../../atoms/customModal/CustomModal';
+import CtaBgImage from '../../molecules/ctaBgImage/CtaBgImage';
+import CustomButton from '../../atoms/customButton/CustomButton';
 
 // React Bootstrap Components
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
@@ -13,28 +15,35 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaInstagram, FaLinkedin, FaFacebookSquare } from 'react-icons/fa';
 
 const CallToActionSection = props => {
+
+    const [modalShow, setModalShow] = useState(false);
+
     return (
-        <section className={styles.ctaSection}>
+        <CtaBgImage>
             <Container className={styles.ctaContainer}>
-                <Row className='align-items-center justify-content-center' style={{ minHeight: '100vh' }}>
-                    <div>
+                <Row className='align-items-center justify-content-center' style={{ minHeight: '100vh', paddingTop: '40px' }}>
+                    <div data-sal="fade" data-sal-delay="200" data-sal-easing="ease">
                         <h2 className={styles.firstTitle}>JUNTOS PODEMOS MARCAR LA DIFERENCIA</h2>
                         <h2 className={styles.secondTitle}>CON ECOLOPHY, TODOS GANAMOS.</h2>
                     </div>
                     <div>
                         <div>
                             <p className={styles.invitationText}>Actualmente estamos desarrollando la aplicación.</p>
-                            <p className={styles.invitationText}>Dejanos a continuación tu email y te avisaremos cuando esté lista.</p>
+                            <p className={styles.invitationText}>¡Dejanos tu email a continuación y te avisaremos cuando esté lista!</p>
                         </div>
                         <div>
                             <Form>
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Control type="email" placeholder="Ingrese su correo electrónico" />
-                                    <Form.Text className="text-muted">Quedate tranquilo que no es spam :)</Form.Text>
-                                </Form.Group>
-                                <Button variant="primary" type="submit">
-                                    ¡QUIERO SER PARTE!
-                                </Button>
+                                <Row style={{ marginTop: '40px' }}>
+                                    <Col xs={12} md={8} style={{ padding: '0px' }}>
+                                        <Form.Group controlId="formBasicEmail">
+                                            <Form.Control style={{ borderRadius: '60px', height: '40px' }} type="email" placeholder="Ingrese su correo electrónico" />
+                                            <Form.Text style={{ color: 'white' }}>Quedate tranquilo que no es spam :)</Form.Text>
+                                        </Form.Group>
+                                    </Col>
+                                    <Col xs={12} md={4}>
+                                        <CustomButton type='primary' text='¡QUIERO SER PARTE!' handleClick={() => setModalShow(true)} />
+                                    </Col>
+                                </Row>
                             </Form>
                         </div>
                     </div>
@@ -44,9 +53,9 @@ const CallToActionSection = props => {
                     </div>
                     <div className={styles.footerLogoSocialContainer}>
                         <img src="https://i.ibb.co/2YSMdvd/Blanco.png" alt="Logo" style={{ width: '160px' }} />
-                        <div>
+                        <div className='d-flex align-items-center'>
                             <p style={{ color: 'white', margin: '0px' }}>hola@ecolophy.com</p>
-                            <ul className='d-flex align-items-center' style={{ margin: '0px' }}>
+                            <ul className='d-flex align-items-center' style={{ margin: '0px', padding: '0px' }}>
                                 <li>
                                     <a href='www.instagram.com/' target="_blank" title="Contact John Vincent at Twitter" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
                                         <FaInstagram size={32} color='white' />
@@ -67,7 +76,11 @@ const CallToActionSection = props => {
                     </div>
                 </Row>
             </Container>
-        </section>
+            <CustomModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
+        </CtaBgImage>
     )
 }
 

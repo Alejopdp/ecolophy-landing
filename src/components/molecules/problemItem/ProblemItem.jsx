@@ -6,19 +6,19 @@ import styles from './problemItem.module.scss'
 // Internal Components
 
 
-// React Bootstrap Components
-import { Container, Row, Col } from 'react-bootstrap';
+// External Components
+import Img from "gatsby-image";
 
 
 const ProblemItem = props => {
     return (
-        <>
+        <div>
             <div className={styles.imgContainer}>
-                <img className={styles.imgParticularProblem} src={props.imgSrc} alt={props.imgAlt} />
+                <Img fixed={props.imgSrc} />
             </div>
             <h4 className={styles.title}>{props.title}</h4>
             <p className={styles.text}>{props.text}</p>
-        </>
+        </div>
     )
 }
 

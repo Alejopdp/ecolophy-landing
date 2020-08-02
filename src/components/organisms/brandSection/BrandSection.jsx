@@ -14,12 +14,14 @@ const BrandSection = props => {
     return (
         <section className={styles.bsSection}>
             <Container className={styles.bsContainer}>
-                <Row className={styles.rowContainer}>
-                    <Col xs={12} md={7}>
-                        <h2 className={styles.firstText}>En ecolophy,</h2>
-                        <h2 className={styles.secondText}>BUSCAMOS CAMBIAR LA REALIDAD DEL COMPRO, USO Y TIRO.</h2>
-                    </Col>
-                </Row>
+                <div data-sal="fade" data-sal-delay="200" data-sal-easing="ease">
+                    <Row className={styles.rowContainer}>
+                        <Col xs={12} md={7}>
+                            <h2 className={styles.firstText}>En ecolophy,</h2>
+                            <h2 className={styles.secondText}>BUSCAMOS CAMBIAR LA REALIDAD DEL COMPRO, USO Y TIRO.</h2>
+                        </Col>
+                    </Row>
+                </div>
             </Container>
         </section>
     )

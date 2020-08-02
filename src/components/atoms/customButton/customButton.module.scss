@@ -1,0 +1,36 @@
+@import '../../../styles.scss';
+
+
+.generalStyles {
+    font-family: $primaryFont;
+    border-radius: 60px;
+    border: none;
+    width: 100%;
+    height: 48px;
+    font-weight: bold;
+    outline:none;
+}
+
+.primaryBtn {
+    color: white;
+    background-color: $primaryGreenTone2;
+}
+
+.secondaryBtn {
+    color: $primaryGreenTone2;
+    background-color: white;
+}
+
+.primaryBtn:hover {
+    color: white;
+    background-color: $primaryGreenTone2;
+}
+
+.secondaryBtn:hover {
+    color: white;
+    background-color: $primaryGreenTone2;
+}
+
+.primaryBtn:focus, .secondaryBtn:focus {
+    outline: none;
+}
