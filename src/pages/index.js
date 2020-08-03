@@ -4,6 +4,7 @@ import globalStyles from '../styles.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { graphql } from "gatsby"
 import sal from 'sal.js'
+import emailjs from 'emailjs-com'
 
 
 // Internal Components
@@ -21,10 +22,92 @@ import CustomModal from '../components/atoms/customModal/CustomModal';
 import { Container, Form, Row, Col } from 'react-bootstrap';
 
 
+
+
 const Home = ({ data }) => {
 
   const [modalShow, setModalShow] = useState(false);
+  const [formData, setFormData] = useState({
+    email: '',
+    nombre: '',
+    barrio: ''
+  });
+  const [formEnviado, setFormEnviado] = useState(false)
 
+
+  const emailJsData = {
+    serviceId: 'gmail_ecolophy',
+    templateId: {
+      internalMail: 'internal_mail',
+      customerMail: 'customer_mail'
+    },
+    userId: 'user_7WelJqSwDWP3H4r67YQgr'
+  }
+
+
+  const validateEmail = () => {
+    let copiaEmail = formData.email
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(copiaEmail).toLowerCase());
+  };
+
+
+  const validateForm = () => {
+    let copiaValidacion = { ...formData };
+    return Object.values(copiaValidacion).every(v => v !== '');
+  };
+
+
+  const handleChange = e => {
+    e.preventDefault();
+    let propName = e.target.name;
+    let value = e.target.value;
+
+    setFormData({
+      ...formData,
+      [propName]: value
+    });
+  };
+
+  // Meter aca una funcion para validar los campos.
+
+
+  const handleSubmit = () => {
+    var templateParams = {
+      ...formData
+    };
+
+    // Mail Interno
+    emailjs.send(emailJsData.serviceId, emailJsData.templateId.internalMail, templateParams, emailJsData.userId)
+      .then(
+        function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        function (error) {
+          console.log('FAILED...', error);
+        }
+      );
+
+    // Mail a Customers
+    emailjs.send(emailJsData.serviceId, emailJsData.templateId.customerMail, templateParams, emailJsData.userId)
+      .then(
+        function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        function (error) {
+          console.log('FAILED...', error);
+          alert('Algo ha fallado. Intente nuevamente')
+        }
+      );
+
+    setFormEnviado(true);
+    setFormData({
+      email: '',
+      nombre: '',
+      barrio: ''
+    });
+
+  };
 
   return (
     <div>
@@ -32,7 +115,7 @@ const Home = ({ data }) => {
         <HeaderSection
           backgroundImg={data.background.childImageSharp.fluid}
         />
-        <StickyHeader setModalShow={setModalShow}>
+        <StickyHeader setModalShow={setModalShow} formData={formData} handleChange={handleChange} validateEmail={validateEmail}>
           <ProblemSection
             composicionResiduosDesktopImg={data.composicionResiduosDesktop.childImageSharp.fixed}
             composicionResiduosMobileImg={data.composicionResiduosMobile.childImageSharp.fixed}
@@ -51,19 +134,32 @@ const Home = ({ data }) => {
           // appImg={data.app.childImageSharp.fluid}
           />
           <ProcessSection
-            descargarAppImg={data.descargarApp.childImageSharp.fixed}
-            comenzarReciclarImg={data.comenzarReciclar.childImageSharp.fixed}
-            stickerQrImg={data.stickerQr.childImageSharp.fixed}
-            solicitudRetiroImg={data.solicitudRetiro.childImageSharp.fixed}
-            recibiEcopointsImg={data.recibiEcopoints.childImageSharp.fixed}
+            // Imagenes Desktop
+            descargarAppDesktopImg={data.descargarAppDesktop.childImageSharp.fixed}
+            comenzarReciclarDesktopImg={data.comenzarReciclarDesktop.childImageSharp.fixed}
+            stickerQrDesktopImg={data.stickerQrDesktop.childImageSharp.fixed}
+            solicitudRetiroDesktopImg={data.solicitudRetiroDesktop.childImageSharp.fixed}
+            recibiEcopointsDesktopImg={data.recibiEcopointsDesktop.childImageSharp.fixed}
+            // Imagenes Mobile
+            descargarAppMobileImg={data.descargarAppMobile.childImageSharp.fixed}
+            comenzarReciclarMobileImg={data.comenzarReciclarMobile.childImageSharp.fixed}
+            stickerQrMobileImg={data.stickerQrMobile.childImageSharp.fixed}
+            solicitudRetiroMobileImg={data.solicitudRetiroMobile.childImageSharp.fixed}
+            recibiEcopointsMobileImg={data.recibiEcopointsMobile.childImageSharp.fixed}
           />
           {/* <PartnersSection /> */}
         </StickyHeader>
-        <CallToActionSection setModalShow={setModalShow} />
+        <CallToActionSection setModalShow={setModalShow} formData={formData} handleChange={handleChange} validateEmail={validateEmail} />
       </Container>
       <CustomModal
         show={modalShow}
         onHide={() => setModalShow(false)}
+        formData={formData}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        formEnviado={formEnviado}
+        handleCloseForm={() => setModalShow(false)}
+        validateForm={validateForm}
       />
     </div>
   )
@@ -177,38 +273,76 @@ export const query = graphql`
           #   }
           # }
       
-          # IMGs for processSection
-    descargarApp: file(relativePath: {eq: "processSection/descargar-app.png" }) {
+          # IMGs for processSection DESKTOP
+    descargarAppDesktop: file(relativePath: {eq: "processSection/descargar-app.png" }) {
             childImageSharp {
           fixed (height: 150) {
             ...GatsbyImageSharpFixed
           }
           }
         }
-    comenzarReciclar: file(relativePath: {eq: "processSection/comenzar-reciclar.png" }) {
+    comenzarReciclarDesktop: file(relativePath: {eq: "processSection/comenzar-reciclar.png" }) {
             childImageSharp {
           fixed (height: 150) {
             ...GatsbyImageSharpFixed
           }
           }
         }
-    stickerQr: file(relativePath: {eq: "processSection/sticker-qr.png" }) {
+    stickerQrDesktop: file(relativePath: {eq: "processSection/sticker-qr.png" }) {
             childImageSharp {
           fixed (height: 150) {
             ...GatsbyImageSharpFixed
           }
           }
         }
-    solicitudRetiro: file(relativePath: {eq: "processSection/solicitud-retiro.png" }) {
+    solicitudRetiroDesktop: file(relativePath: {eq: "processSection/solicitud-retiro.png" }) {
             childImageSharp {
           fixed (height: 150) {
             ...GatsbyImageSharpFixed
           }
           }
         }
-    recibiEcopoints: file(relativePath: {eq: "processSection/recibi-ecopoints.png" }) {
+    recibiEcopointsDesktop: file(relativePath: {eq: "processSection/recibi-ecopoints.png" }) {
             childImageSharp {
           fixed (height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+          }
+        }
+
+
+                  # IMGs for processSection Mobile
+    descargarAppMobile: file(relativePath: {eq: "processSection/descargar-app.png" }) {
+            childImageSharp {
+          fixed (width: 166) {
+            ...GatsbyImageSharpFixed
+          }
+          }
+        }
+    comenzarReciclarMobile: file(relativePath: {eq: "processSection/comenzar-reciclar.png" }) {
+            childImageSharp {
+              fixed (width: 166) {
+            ...GatsbyImageSharpFixed
+          }
+          }
+        }
+    stickerQrMobile: file(relativePath: {eq: "processSection/sticker-qr.png" }) {
+            childImageSharp {
+              fixed (width: 166) {
+            ...GatsbyImageSharpFixed
+          }
+          }
+        }
+    solicitudRetiroMobile: file(relativePath: {eq: "processSection/solicitud-retiro.png" }) {
+            childImageSharp {
+              fixed (width: 166) {
+            ...GatsbyImageSharpFixed
+          }
+          }
+        }
+    recibiEcopointsMobile: file(relativePath: {eq: "processSection/recibi-ecopoints.png" }) {
+            childImageSharp {
+              fixed (width: 166) {
             ...GatsbyImageSharpFixed
           }
           }

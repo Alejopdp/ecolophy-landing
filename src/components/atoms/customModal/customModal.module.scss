@@ -2,9 +2,18 @@
 
 .thanksTitle {
     font-family: $primaryFont;
-    color: $primaryGreenTone3;
+    color: $primaryGreenTone2;
     text-align: center;
     font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.thanksSubtitle {
+    font-family: $secondaryFont;
+    color: $textFirstColor;
+    text-align: center;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 24px;
 }
@@ -38,4 +47,12 @@
 .inputClass {
     border-radius: 60px;
     height: 40px;
+}
+
+.contactText {
+    font-family: $secondaryFont;
+    color: $textSecondColor;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
 }

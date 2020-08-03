@@ -1,23 +1,23 @@
 // Baseline & Utils
 import React from 'react'
-import styles from './processItem.module.scss'
+import styles from './processItemDesktop.module.scss'
 
 
 // Internal Components
 
 
-// React Bootstrap Components
+// External Components
 import Img from "gatsby-image";
 
 
-const ProcessItem = props => {
+const ProcessItemDesktop = props => {
     return (
         <div>
             <div className={styles.stepNumberContainer}>
                 <span className={styles.stepNumber}>{props.stepNumber}</span>
             </div>
             <div className={styles.imgContainer}>
-                <Img fixed={props.imgSrc} />
+                <Img fixed={props.imgSrcDesktop} />
             </div>
             <h4 className={styles.title}>{props.title}</h4>
             <p className={styles.text}>{props.text}</p>
@@ -25,4 +25,4 @@ const ProcessItem = props => {
     )
 }
 
-export default ProcessItem;
+export default ProcessItemDesktop;

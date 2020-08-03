@@ -17,31 +17,36 @@ const ProcessSection = props => {
     const processSteps = [
         {
             stepNumber: 1,
-            imgSrc: props.descargarAppImg,
+            imgSrcDesktop: props.descargarAppDesktopImg,
+            imgSrcMobile: props.descargarAppMobileImg,
             title: 'DESCARGÁ LA APP',
             text: 'Desde Play Store o App Store, y recibi los stickers QR'
         },
         {
             stepNumber: 2,
-            imgSrc: props.comenzarReciclarImg,
+            imgSrcDesktop: props.comenzarReciclarDesktopImg,
+            imgSrcMobile: props.comenzarReciclarMobileImg,
             title: 'COMENZÁ A RECICLAR',
             text: 'Separa tus residuos limpios y secos en un bolsa separada del resto'
         },
         {
             stepNumber: 3,
-            imgSrc: props.stickerQrImg,
+            imgSrcDesktop: props.stickerQrDesktopImg,
+            imgSrcMobile: props.stickerQrMobileImg,
             title: 'STICKER QR',
             text: 'Una vez llenada la bolsa, pégalo para comenzar la etapa de solicitud'
         },
         {
             stepNumber: 4,
-            imgSrc: props.solicitudRetiroImg,
+            imgSrcDesktop: props.solicitudRetiroDesktopImg,
+            imgSrcMobile: props.solicitudRetiroMobileImg,
             title: 'SOLICITUD DE RETIRO GRATIS',
             text: 'Luego de scaneado el código solicta gratis el reitruo de tu bolsa, y en el dia nosotros la pasamos a buscar'
         },
         {
             stepNumber: 5,
-            imgSrc: props.recibiEcopointsImg,
+            imgSrcDesktop: props.recibiEcopointsDesktopImg,
+            imgSrcMobile: props.recibiEcopointsMobileImg,
             title: 'RECIBÍ ECOPOINTS',
             text: 'Una vez entregada la bolsa recibi puntos para intercambiarlos por beneficios exlusivos'
         }
@@ -60,9 +65,9 @@ const ProcessSection = props => {
                     <Row className='d-none d-md-flex'>
                         <ProcessContainerDesktop steps={processSteps} />
                     </Row>
-                    {/* <Row className='d-flex d-md-none'>
+                    <Row className='d-flex d-md-none'>
                         <ProcessContainerMobile steps={processSteps} />
-                    </Row> */}
+                    </Row>
                 </div>
             </Container>
         </section>

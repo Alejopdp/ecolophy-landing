@@ -34,3 +34,7 @@
 .primaryBtn:focus, .secondaryBtn:focus {
     outline: none;
 }
+
+.generalStyles:disabled {
+    opacity: 0.7;
+}

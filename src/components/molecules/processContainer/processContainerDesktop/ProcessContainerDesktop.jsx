@@ -4,7 +4,7 @@ import styles from './processContainerDesktop.module.scss'
 
 
 // Internal Components
-import ProcessItem from '../../processItem/ProcessItem';
+import ProcessItemDesktop from '../../processItem/processItemDesktop/ProcessItemDesktop';
 import ItemsCarousel from 'react-items-carousel';
 
 
@@ -52,7 +52,7 @@ const ProcessContainerDesktop = props => {
                 leftChevron={arrow('<')}
             >
                 {props.steps.map((step, key) => {
-                    return <ProcessItem key={key} stepNumber={step.stepNumber} imgSrc={step.imgSrc} imgAlt={step.title} title={step.title} text={step.text} />
+                    return <ProcessItemDesktop key={key} stepNumber={step.stepNumber} imgSrcDesktop={step.imgSrcDesktop} imgAlt={step.title} title={step.title} text={step.text} />
                 })}
             </ItemsCarousel>
         </div>
