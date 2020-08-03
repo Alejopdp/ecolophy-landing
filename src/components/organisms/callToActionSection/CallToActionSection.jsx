@@ -8,11 +8,13 @@ import CustomModal from '../../atoms/customModal/CustomModal';
 import CtaBgImage from '../../molecules/ctaBgImage/CtaBgImage';
 import CustomButton from '../../atoms/customButton/CustomButton';
 
-// React Bootstrap Components
+// External Components
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import Img from "gatsby-image";
 
 // Icons
 import { FaInstagram, FaLinkedin, FaFacebookSquare } from 'react-icons/fa';
+
 
 const CallToActionSection = props => {
     return (
@@ -52,9 +54,9 @@ const CallToActionSection = props => {
                         </div>
                         <div className={styles.footerLogoSocialContainer}>
                             <Col xs={12} md={5} className={styles.footerLogoCol}>
-                                <img src="https://i.ibb.co/2YSMdvd/Blanco.png" alt="Logo" style={{ width: '160px' }} />
+                                <Img fixed={props.logoBlancoImg} />
+                                {/* <img src="https://i.ibb.co/2YSMdvd/Blanco.png" alt="Logo" style={{ width: '160px' }} /> */}
                             </Col>
-                            {/* <img src="https://i.ibb.co/2YSMdvd/Blanco.png" alt="Logo" style={{ width: '160px' }} /> */}
                             <Col xs={12} md={7} style={{ padding: '0px', alignSelf: 'center' }}>
                                 <div className={styles.footerSocialDiv}>
                                     <p style={{ color: 'white', margin: '0px' }}>hola@ecolophy.com</p>

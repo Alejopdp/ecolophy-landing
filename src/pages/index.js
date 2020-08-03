@@ -115,7 +115,7 @@ const Home = ({ data }) => {
         <HeaderSection
           backgroundImg={data.background.childImageSharp.fluid}
         />
-        <StickyHeader setModalShow={setModalShow} formData={formData} handleChange={handleChange} validateEmail={validateEmail}>
+        <StickyHeader logoVerdeImg={data.logoVerde.childImageSharp.fixed} setModalShow={setModalShow} formData={formData} handleChange={handleChange} validateEmail={validateEmail}>
           <ProblemSection
             composicionResiduosDesktopImg={data.composicionResiduosDesktop.childImageSharp.fixed}
             composicionResiduosMobileImg={data.composicionResiduosMobile.childImageSharp.fixed}
@@ -149,7 +149,7 @@ const Home = ({ data }) => {
           />
           {/* <PartnersSection /> */}
         </StickyHeader>
-        <CallToActionSection setModalShow={setModalShow} formData={formData} handleChange={handleChange} validateEmail={validateEmail} />
+        <CallToActionSection logoBlancoImg={data.logoBlanco.childImageSharp.fixed} setModalShow={setModalShow} formData={formData} handleChange={handleChange} validateEmail={validateEmail} />
       </Container>
       <CustomModal
         show={modalShow}
@@ -168,8 +168,26 @@ const Home = ({ data }) => {
 
 export const query = graphql`
   query {
+    ## GENERAL IMGs
 
-            ## IMGs for headerSection
+    logoVerde: file(relativePath: {eq: "general/logoVerde.png" }) {
+      childImageSharp {
+          fixed (height: 48) {
+            ...GatsbyImageSharpFixed
+          }
+          }
+        }
+
+        logoBlanco: file(relativePath: {eq: "general/logoBlanco.png" }) {
+      childImageSharp {
+          fixed (width: 160) {
+            ...GatsbyImageSharpFixed
+          }
+          }
+        }
+
+
+    ## IMGs for headerSection
       
     background: file(relativePath: {eq: "headerSection/background.jpg" }) {
             childImageSharp {
