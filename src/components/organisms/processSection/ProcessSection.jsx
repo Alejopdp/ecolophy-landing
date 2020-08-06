@@ -20,35 +20,35 @@ const ProcessSection = props => {
             imgSrcDesktop: props.descargarAppDesktopImg,
             imgSrcMobile: props.descargarAppMobileImg,
             title: 'DESCARGÁ LA APP',
-            text: 'Desde Play Store o App Store, y recibi los stickers QR'
+            text: 'Desde Play Store o App Store, y recibí los stickers QR'
         },
         {
             stepNumber: 2,
             imgSrcDesktop: props.comenzarReciclarDesktopImg,
             imgSrcMobile: props.comenzarReciclarMobileImg,
             title: 'COMENZÁ A RECICLAR',
-            text: 'Separa tus residuos limpios y secos en un bolsa separada del resto'
+            text: 'Separá tus residuos limpios y secos en un bolsa separada del resto'
         },
         {
             stepNumber: 3,
             imgSrcDesktop: props.stickerQrDesktopImg,
             imgSrcMobile: props.stickerQrMobileImg,
             title: 'STICKER QR',
-            text: 'Una vez llenada la bolsa, pégalo para comenzar la etapa de solicitud'
+            text: 'Una vez llenada la bolsa, pegalo para comenzar la etapa de solicitud'
         },
         {
             stepNumber: 4,
             imgSrcDesktop: props.solicitudRetiroDesktopImg,
             imgSrcMobile: props.solicitudRetiroMobileImg,
             title: 'SOLICITUD DE RETIRO GRATIS',
-            text: 'Luego de scaneado el código solicta gratis el reitruo de tu bolsa, y en el dia nosotros la pasamos a buscar'
+            text: 'Luego de escanear el código QR, solicitá gratis el retiro de tu bolsa y en el dia nosotros la pasaremos a buscar'
         },
         {
             stepNumber: 5,
             imgSrcDesktop: props.recibiEcopointsDesktopImg,
             imgSrcMobile: props.recibiEcopointsMobileImg,
             title: 'RECIBÍ ECOPOINTS',
-            text: 'Una vez entregada la bolsa recibi puntos para intercambiarlos por beneficios exlusivos'
+            text: 'Una vez entregada la bolsa, recibirás Ecopoints para intercambiarlos por beneficios exlusivos'
         }
     ]
 

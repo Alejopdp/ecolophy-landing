@@ -147,7 +147,7 @@ const Home = ({ data }) => {
             solicitudRetiroMobileImg={data.solicitudRetiroMobile.childImageSharp.fixed}
             recibiEcopointsMobileImg={data.recibiEcopointsMobile.childImageSharp.fixed}
           />
-          {/* <PartnersSection /> */}
+          <PartnersSection logoUcaImg={data.logoUca.childImageSharp.fixed}/>
         </StickyHeader>
         <CallToActionSection logoBlancoImg={data.logoBlanco.childImageSharp.fixed} setModalShow={setModalShow} formData={formData} handleChange={handleChange} validateEmail={validateEmail} />
       </Container>
@@ -181,6 +181,14 @@ export const query = graphql`
         logoBlanco: file(relativePath: {eq: "general/logoBlanco.png" }) {
       childImageSharp {
           fixed (width: 160) {
+            ...GatsbyImageSharpFixed
+          }
+          }
+        }
+
+        logoUca: file(relativePath: {eq: "general/logo-uca.png" }) {
+      childImageSharp {
+          fixed (width: 80) {
             ...GatsbyImageSharpFixed
           }
           }

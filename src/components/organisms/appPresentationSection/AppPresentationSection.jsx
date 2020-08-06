@@ -28,7 +28,7 @@ const AppPresentationSection = props => {
                             <Img fixed={props.appMobileImg} />
                         </Col>
                         <Col xs={12} md={4} className={styles.appDescriptionItemContainer}>
-                            <AppDescriptionItem imgSrc={props.metodologiaGreencycleImg} title='METODOLOGIA GREENCYCLE' text='En etapas de retiro y separación de material' />
+                            <AppDescriptionItem imgSrc={props.metodologiaGreencycleImg} title='METODOLOGÍA GREENCYCLE' text='En etapas de retiro y separación de material.' />
                             <AppDescriptionItem imgSrc={props.sistemaIncentivosImg} title='SISTEMAS DE INCENTIVOS' text='Con las Ecobags, Ecocest & Ecopoints, el reciclaje no va a significar un costo extra.' />
                         </Col>
                         <Col xs={12} md={4} className='d-none d-md-flex justify-content-center'>

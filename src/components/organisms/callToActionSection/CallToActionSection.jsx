@@ -55,7 +55,6 @@ const CallToActionSection = props => {
                         <div className={styles.footerLogoSocialContainer}>
                             <Col xs={12} md={5} className={styles.footerLogoCol}>
                                 <Img fixed={props.logoBlancoImg} />
-                                {/* <img src="https://i.ibb.co/2YSMdvd/Blanco.png" alt="Logo" style={{ width: '160px' }} /> */}
                             </Col>
                             <Col xs={12} md={7} style={{ padding: '0px', alignSelf: 'center' }}>
                                 <div className={styles.footerSocialDiv}>
