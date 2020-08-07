@@ -59,23 +59,23 @@ const CallToActionSection = props => {
                             <Col xs={12} md={7} style={{ padding: '0px', alignSelf: 'center' }}>
                                 <div className={styles.footerSocialDiv}>
                                     <p style={{ color: 'white', margin: '0px' }}>hola@ecolophy.com</p>
-                                    {/* <ul className='d-flex align-items-center' style={{ margin: '0px', padding: '0px' }}>
+                                    <ul className='d-flex align-items-center' style={{ margin: '0px', padding: '0px', listStyle: 'none' }}>
                                         <li>
-                                            <a href='www.instagram.com/' target="_blank" title="Contact John Vincent at Twitter" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
+                                            <a href='https://www.instagram.com/ecolophy.oficial' target="_blank" title="Contact John Vincent at Facebook" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
                                                 <FaInstagram size={32} color='white' />
                                             </a>
                                         </li>
                                         <li>
-                                            <a href='www.facebook.com/' target="_blank" title="Contact John Vincent at Facebook" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
+                                            <a href='https://www.facebook.com/ecolophy/' target="_blank" title="Contact John Vincent at Facebook" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
                                                 <FaFacebookSquare size={32} color='white' />
                                             </a>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <a href='www.linkedin.com/' target="_blank" title="Contact John Vincent at AngelList" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
                                                 <FaLinkedin size={32} color='white' />
                                             </a>
-                                        </li>
-                                    </ul> */}
+                                        </li> */}
+                                    </ul>
                                 </div>
                             </Col>
                         </div>

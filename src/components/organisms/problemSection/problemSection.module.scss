@@ -49,6 +49,9 @@
     text-align: -webkit-center;
 }
 
+.problemCol {
+    padding-top: 48px;
+}
 
 
 @media (max-width: 576px) { 
@@ -64,5 +67,8 @@
     .psContainer {
         min-height: fit-content;
         padding: 40px 16px;
+    }
+    .problemCol {
+        padding-top: 18px;
     }
 }

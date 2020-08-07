@@ -30,6 +30,15 @@ module.exports = {
         enterEventName: 'sal:in', // Enter event name
         exitEventName: 'sal:out', // Exit event name
       }
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Avenir Next LT Pro"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
     }
   ],
 }

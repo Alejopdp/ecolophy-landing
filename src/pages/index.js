@@ -69,7 +69,36 @@ const Home = ({ data }) => {
     });
   };
 
-  // Meter aca una funcion para validar los campos.
+  const handleOnInputChangeAutocomplete = (text, e) => {
+    e.preventDefault();
+    let propName = e.target.name;
+    let value = e.target.value;
+
+    setFormData({
+      ...formData,
+      [propName]: value
+    });
+  }
+
+  const handleOnChangeAutocomplete = selectedValue => {
+    let propName = 'barrio';
+    let value = selectedValue;
+
+    setFormData({
+      ...formData,
+      [propName]: value
+    });
+  }
+
+  const handleCloseModal = () => {
+    setFormEnviado(false)
+    setModalShow(false)
+    setFormData({
+      email: '',
+      nombre: '',
+      barrio: ''
+    });
+  }
 
 
   const handleSubmit = () => {
@@ -114,8 +143,14 @@ const Home = ({ data }) => {
       <Container fluid style={{ padding: '0px', backgroundColor: globalStyles.backgroundColor }}>
         <HeaderSection
           backgroundImg={data.background.childImageSharp.fluid}
+          logoBlancoImg={data.logoBlanco.childImageSharp.fixed}
         />
-        <StickyHeader logoVerdeImg={data.logoVerde.childImageSharp.fixed} setModalShow={setModalShow} formData={formData} handleChange={handleChange} validateEmail={validateEmail}>
+        <StickyHeader
+          logoVerdeImg={data.logoVerde.childImageSharp.fixed}
+          setModalShow={setModalShow} formData={formData}
+          handleChange={handleChange}
+          validateEmail={validateEmail}
+        >
           <ProblemSection
             composicionResiduosDesktopImg={data.composicionResiduosDesktop.childImageSharp.fixed}
             composicionResiduosMobileImg={data.composicionResiduosMobile.childImageSharp.fixed}
@@ -123,7 +158,9 @@ const Home = ({ data }) => {
             tasasRechazoImg={data.tasasRechazo.childImageSharp.fixed}
             culturaReciclajeImg={data.culturaReciclaje.childImageSharp.fixed}
           />
-          <BrandSection />
+          <BrandSection
+            isotipoImg={data.isotipo.childImageSharp.fixed}
+          />
           <AppPresentationSection
             metodologiaGreencycleImg={data.metodologiaGreencycle.childImageSharp.fixed}
             tecnologiaQrImg={data.tecnologiaQr.childImageSharp.fixed}
@@ -131,7 +168,6 @@ const Home = ({ data }) => {
             mundoEcolophyImg={data.mundoEcolophy.childImageSharp.fixed}
             appDesktopImg={data.appDesktop.childImageSharp.fixed}
             appMobileImg={data.appMobile.childImageSharp.fixed}
-          // appImg={data.app.childImageSharp.fluid}
           />
           <ProcessSection
             // Imagenes Desktop
@@ -147,18 +183,28 @@ const Home = ({ data }) => {
             solicitudRetiroMobileImg={data.solicitudRetiroMobile.childImageSharp.fixed}
             recibiEcopointsMobileImg={data.recibiEcopointsMobile.childImageSharp.fixed}
           />
-          <PartnersSection logoUcaImg={data.logoUca.childImageSharp.fixed}/>
+          <PartnersSection
+            logoUcaImg={data.logoUca.childImageSharp.fixed}
+          />
         </StickyHeader>
-        <CallToActionSection logoBlancoImg={data.logoBlanco.childImageSharp.fixed} setModalShow={setModalShow} formData={formData} handleChange={handleChange} validateEmail={validateEmail} />
+        <CallToActionSection
+          logoBlancoImg={data.logoBlanco.childImageSharp.fixed}
+          setModalShow={setModalShow}
+          formData={formData}
+          handleChange={handleChange}
+          validateEmail={validateEmail}
+        />
       </Container>
       <CustomModal
         show={modalShow}
-        onHide={() => setModalShow(false)}
+        onHide={handleCloseModal}
         formData={formData}
+        handleOnInputChangeAutocomplete={handleOnInputChangeAutocomplete}
+        handleOnChangeAutocomplete={handleOnChangeAutocomplete}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         formEnviado={formEnviado}
-        handleCloseForm={() => setModalShow(false)}
+        handleCloseForm={handleCloseModal}
         validateForm={validateForm}
       />
     </div>
@@ -189,6 +235,14 @@ export const query = graphql`
         logoUca: file(relativePath: {eq: "general/logo-uca.png" }) {
       childImageSharp {
           fixed (width: 80) {
+            ...GatsbyImageSharpFixed
+          }
+          }
+        }
+
+        isotipo: file(relativePath: {eq: "general/isotipo.png" }) {
+      childImageSharp {
+          fixed (height: 264) {
             ...GatsbyImageSharpFixed
           }
           }

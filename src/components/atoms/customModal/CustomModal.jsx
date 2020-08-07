@@ -5,11 +5,15 @@ import styles from './customModal.module.scss'
 // Internal Components
 import CustomButton from '../customButton/CustomButton';
 
-// React Bootstrap Components
+// External Components
 import { Modal, Form } from 'react-bootstrap';
+import { Typeahead } from 'react-bootstrap-typeahead';
+
 
 
 const CustomModal = props => {
+
+    const barrios = ['Agronomía', 'Almagro', 'Balvanera', 'Barracas', 'Belgrano', 'Boedo', 'Caballito', 'Chacarita', 'Coghlan', 'Colegiales', 'Constitución', 'Flores', 'Floresta', 'La Boca', 'La Paternal', 'Liniers', 'Mataderos', 'Monte Castro', 'Montserrat', 'Nueva Pompeya', 'Núñez', 'Palermo', 'Parque Avellaneda', 'Parque Chacabuco', 'Parque Chas', 'Parque Patricios', 'Puerto Madero', 'Recoleta', 'Retiro', 'Saavedra', 'San Cristóbal', 'San Nicolás', 'San Telmo', 'Vélez Sársfield', 'Versalles', 'Villa Crespo', 'Villa del Parque', 'Villa Devoto', 'Villa General Mitre', 'Villa Lugano', 'Villa Luro', 'Villa Ortúzar', 'Villa Pueyrredón', 'Villa Real', 'Villa Riachuelo', 'Villa Santa Rita', 'Villa Soldati', 'Villa Urquiza', 'GBA Norte', 'GBA Sur', 'GBA Oeste']
 
     const contenidoInicial =
         <Modal.Body style={{ padding: '24px' }}>
@@ -19,14 +23,29 @@ const CustomModal = props => {
             </div>
             <h5 className={styles.moreInfoText}>Por último, queremos saber un poco más de vos...</h5>
             <Form>
-                <Form.Group controlId="formBasicEmail">
+                <Form.Group controlId="nombre">
                     <Form.Label className={styles.formLabel}>¿Cual es tu nombre?</Form.Label>
                     <Form.Control name="nombre" value={props.formData.nombre} onChange={props.handleChange} type="text" className={styles.inputClass} />
                 </Form.Group>
 
-                <Form.Group controlId="formBasicPassword">
-                    <Form.Label className={styles.formLabel}>¿En que barrio vivis?</Form.Label>
-                    <Form.Control name="barrio" value={props.formData.barrio} onChange={props.handleChange} type="text" className={styles.inputClass} />
+                <Form.Group controlId="barrio">
+                    <Form.Label className={styles.formLabel}>¿En qué barrio vivis?</Form.Label>
+                    {/* <Form.Control name="barrio" value={props.formData.barrio} onChange={props.handleChange} type="text" className={styles.inputClass} /> */}
+                    <Typeahead
+                        // onChange={(selected) => {
+                        //     // Handle selections...
+                        // }}
+                        id="autocomplete-input"
+                        inputProps={{
+                            name: "barrio",
+                            value: props.formData.barrio
+                        }}
+                        onChange={(selected) => props.handleOnChangeAutocomplete(selected[0])}
+                        onInputChange={props.handleOnInputChangeAutocomplete}
+                        options={barrios}
+                        emptyLabel='No se encontraron sugerencias de barrios.'
+                        className={styles.inputClass}
+                    />
                 </Form.Group>
                 <div style={{ marginTop: '24px' }}>
                     <CustomButton type='primary' text='FINALIZAR' disabled={!props.validateForm()} handleClick={props.handleSubmit} />

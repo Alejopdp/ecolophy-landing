@@ -67,13 +67,6 @@
 }
 
 @media (max-width: 576px) { 
-    .footerLogoCol {
-        text-align: center;
-        margin-bottom: 16px;
-    }
-    .footerSocialDiv {
-        justify-content: center;
-    }
     .firstTitle {
         font-size: 24px;
         margin-bottom: 24px;
@@ -91,3 +84,27 @@
         padding: 0px 16px;
     }
 }
+
+@media (max-width: 768px) { 
+    .footerLogoCol {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .footerSocialDiv {
+        justify-content: center;
+    }
+    .firstTitle {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    .secondTitle {
+        font-size: 40px;
+    }
+    .invitationText {
+        font-size: 18px;
+    }
+    .firstFinalTitle, .secondFinalTitle {
+        font-size: 16px;
+    }
+}
+

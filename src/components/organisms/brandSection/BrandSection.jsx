@@ -6,8 +6,10 @@ import styles from './brandSection.module.scss'
 // Internal Components
 
 
-// React Bootstrap Components
+// External Components
 import { Container, Row, Col } from 'react-bootstrap';
+import Img from "gatsby-image";
+
 
 
 const BrandSection = props => {
@@ -15,9 +17,12 @@ const BrandSection = props => {
         <section className={styles.bsSection}>
             <Container className={styles.bsContainer}>
                 <Row className={styles.rowContainer}>
-                    <Col xs={12} md={7}>
-                        <h2 className={styles.firstText}>En ecolophy,</h2>
-                        <h2 className={styles.secondText}>BUSCAMOS CAMBIAR LA REALIDAD DEL COMPRO, USO Y TIRO.</h2>
+                    <Col xs={12} md={7} className='align-self-center'>
+                        <h2 className={styles.firstText}>En ecolo<strong>phy</strong>,</h2>
+                        <h2 className={styles.secondText}><strong>BUSCAMOS CAMBIAR LA REALIDAD</strong> DEL <strong>COMPRO, USO Y TIRO</strong>.</h2>
+                    </Col>
+                    <Col md={5} className='d-none d-md-block' style={{ textAlign: 'right' }}>
+                        <Img fixed={props.isotipoImg} />
                     </Col>
                 </Row>
             </Container>

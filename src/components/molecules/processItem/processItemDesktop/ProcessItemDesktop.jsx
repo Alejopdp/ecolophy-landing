@@ -12,7 +12,7 @@ import Img from "gatsby-image";
 
 const ProcessItemDesktop = props => {
     return (
-        <div>
+        <div style={{ padding: '0px 24px' }}>
             <div className={styles.stepNumberContainer}>
                 <span className={styles.stepNumber}>{props.stepNumber}</span>
             </div>

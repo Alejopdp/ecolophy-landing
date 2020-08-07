@@ -1,7 +1,7 @@
 // Baseline & Utils
 import React from 'react'
 import styles from './headerSection.module.scss'
-
+import generalStyles from '../../../styles.scss'
 
 // Internal Components
 import CustomButton from '../../atoms/customButton/CustomButton'
@@ -10,6 +10,7 @@ import HeaderBgImage from '../../molecules/headerBgImage/HeaderBgImage'
 
 // External Components
 import { Container, Row, Col } from 'react-bootstrap';
+import Img from "gatsby-image";
 
 
 const HeaderSection = props => {
@@ -24,8 +25,13 @@ const HeaderSection = props => {
             <Container className={styles.hsContainer}>
                 <Row className='align-items-center' style={{ minHeight: '100vh' }}>
                     <div data-sal="fade" data-sal-delay="200" data-sal-easing="ease">
-                        <Col xs={12} md={7}>
-                            <h1 className={styles.title}>LLEGÓ UNA NUEVA FORMA DE RECICLAR</h1>
+                        <div className={styles.logoContainer}>
+                            <Img fixed={props.logoBlancoImg} />
+                        </div>
+                        <Col xs={12} md={6}>
+                            <h1 className={styles.title}>
+                                LLEGÓ UNA NUEVA FORMA DE <span style={{ color: generalStyles.primaryGreenTone2 }}>RECICLAR</span>
+                            </h1>
                             <h3 className={styles.subtitle}>Con Ecolophy, reciclar nunca fue tan fácil.</h3>
                             <Col xs={12} md={6} style={{ padding: '0px' }}>
                                 <CustomButton type='secondary' text='¡QUIERO VER MÁS!' handleClick={handleClickVerMas} />
