@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { graphql } from "gatsby"
 import sal from 'sal.js'
 import emailjs from 'emailjs-com'
-
+import favicon from '../images/favicon.ico'
 
 // Internal Components
 import HeaderSection from '../components/organisms/headerSection/HeaderSection';
@@ -20,7 +20,7 @@ import CustomModal from '../components/atoms/customModal/CustomModal';
 
 // External Components
 import { Container, Form, Row, Col } from 'react-bootstrap';
-
+import { Helmet } from "react-helmet"
 
 
 
@@ -140,7 +140,13 @@ const Home = ({ data }) => {
 
   return (
     <div>
-      <Container fluid style={{ padding: '0px', backgroundColor: globalStyles.backgroundColor }}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <html lang="es" />
+        <title>Ecolophy - La filosofía del reciclaje</title>
+        <link rel="icon" href={favicon} />
+      </Helmet>
+      <Container fluid id='main-container'>
         <HeaderSection
           backgroundImg={data.background.childImageSharp.fluid}
           logoBlancoImg={data.logoBlanco.childImageSharp.fixed}

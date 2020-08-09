@@ -1,3 +1,5 @@
+/* Avenir Next LT Pro */
+
 @font-face {
     font-family: "Avenir Next LT Pro";
     font-weight: 400;
@@ -29,3 +31,35 @@
     src: url("AvenirNextLTPro-Bold.otf");
     font-display: swap;
 }
+
+
+/* Arvo */
+
+@font-face {
+    font-family: "Arvo";
+    font-weight: 400;
+    font-style: normal;
+    src: url("Arvo-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Arvo";
+    font-weight: 400;
+    font-style: italic;
+    src: url("Arvo-Italic.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Arvo";
+    font-weight: 700;
+    font-style: normal;
+    src: url("Arvo-Bold.ttf");
+    font-display: swap;
+}
+
+
+
+
+

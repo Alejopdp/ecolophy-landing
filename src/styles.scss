@@ -20,6 +20,12 @@ $secondaryFont: 'Avenir Next LT Pro', sans-serif;
     height: 64px;
 }
 
+#main-container {
+    background-color: $backgroundColor;
+    padding: 0px;
+}
+
+
 :export {
     // Colors
     primaryGreenTone1: $primaryGreenTone1;

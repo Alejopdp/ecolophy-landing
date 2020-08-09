@@ -35,10 +35,11 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Avenir Next LT Pro"],
+          families: ["Avenir Next LT Pro, Arvo"],
           urls: ["/fonts/fonts.css"],
         },
       },
-    }
+    },
+    `gatsby-plugin-react-helmet`
   ],
 }

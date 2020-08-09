@@ -30,7 +30,7 @@ const HeaderSection = props => {
                         </div>
                         <Col xs={12} md={6}>
                             <h1 className={styles.title}>
-                                LLEGÓ UNA NUEVA FORMA DE <span style={{ color: generalStyles.primaryGreenTone2 }}>RECICLAR</span>
+                                LLEGÓ UNA NUEVA FORMA DE <span className={styles.titleSubcolor}>RECICLAR</span>
                             </h1>
                             <h3 className={styles.subtitle}>Con Ecolophy, reciclar nunca fue tan fácil.</h3>
                             <Col xs={12} md={6} style={{ padding: '0px' }}>
