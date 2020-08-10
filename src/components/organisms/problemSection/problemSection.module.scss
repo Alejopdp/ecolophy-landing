@@ -1,7 +1,6 @@
 @import '../../../styles.scss';
 
 .psSection {
-    background-color: $backgroundColor;
 }
 
 .psContainer {
@@ -47,6 +46,7 @@
 .imgProblemContainer {
     text-align: center;
     text-align: -webkit-center;
+    justify-content: flex-end
 }
 
 .problemCol {
@@ -69,6 +69,6 @@
         padding: 40px 16px;
     }
     .problemCol {
-        padding-top: 18px;
+        padding-top: 0px;
     }
 }

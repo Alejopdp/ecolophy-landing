@@ -16,7 +16,7 @@ import Img from "gatsby-image";
 const HeaderSection = props => {
 
     const handleClickVerMas = () => {
-        const section = document.querySelector('#problema');
+        const section = document.querySelector('#brand-section');
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
@@ -32,9 +32,9 @@ const HeaderSection = props => {
                             <h1 className={styles.title}>
                                 LLEGÓ UNA NUEVA FORMA DE <span className={styles.titleSubcolor}>RECICLAR</span>
                             </h1>
-                            <h3 className={styles.subtitle}>Con Ecolophy, reciclar nunca fue tan fácil.</h3>
+                            <h3 className={styles.subtitle}>¿Te imaginás cambiar tus residuos por beneficios exclusivos? Desde la App de Ecolophy podrás hacer eso y mucho más</h3>
                             <Col xs={12} md={6} style={{ padding: '0px' }}>
-                                <CustomButton type='secondary' text='¡QUIERO VER MÁS!' handleClick={handleClickVerMas} />
+                                <CustomButton type='secondary' text='CONOCÉ LA APP' handleClick={handleClickVerMas} />
                             </Col>
                         </Col>
                     </div>

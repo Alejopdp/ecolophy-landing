@@ -14,7 +14,7 @@ import Img from "gatsby-image";
 
 const BrandSection = props => {
     return (
-        <section className={styles.bsSection}>
+        <section className={styles.bsSection} id='brand-section'>
             <Container className={styles.bsContainer}>
                 <Row className={styles.rowContainer}>
                     <Col xs={12} md={7} className='align-self-center'>

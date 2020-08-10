@@ -145,6 +145,7 @@ const Home = ({ data }) => {
         <html lang="es" />
         <title>Ecolophy - La filosofía del reciclaje</title>
         <link rel="icon" href={favicon} />
+        <meta name="description" content="Con Ecolophy llega una nueva forma de reciclar que nos beneficie a todos." />
       </Helmet>
       <Container fluid id='main-container'>
         <HeaderSection
@@ -189,9 +190,9 @@ const Home = ({ data }) => {
             solicitudRetiroMobileImg={data.solicitudRetiroMobile.childImageSharp.fixed}
             recibiEcopointsMobileImg={data.recibiEcopointsMobile.childImageSharp.fixed}
           />
-          <PartnersSection
+          {/* <PartnersSection
             logoUcaImg={data.logoUca.childImageSharp.fixed}
-          />
+          /> */}
         </StickyHeader>
         <CallToActionSection
           logoBlancoImg={data.logoBlanco.childImageSharp.fixed}
@@ -199,6 +200,7 @@ const Home = ({ data }) => {
           formData={formData}
           handleChange={handleChange}
           validateEmail={validateEmail}
+          logoUcaImg={data.logoUca.childImageSharp.fixed}
         />
       </Container>
       <CustomModal
@@ -238,9 +240,17 @@ export const query = graphql`
           }
         }
 
-        logoUca: file(relativePath: {eq: "general/logo-uca.png" }) {
+      #   logoUca: file(relativePath: {eq: "general/logo-uca.png" }) {
+      # childImageSharp {
+      #     fixed (width: 80) {
+      #       ...GatsbyImageSharpFixed
+      #     }
+      #     }
+      #   }
+
+        logoUca: file(relativePath: {eq: "general/logo-uca-dos.png" }) {
       childImageSharp {
-          fixed (width: 80) {
+          fixed (height: 57) {
             ...GatsbyImageSharpFixed
           }
           }
@@ -309,20 +319,22 @@ export const query = graphql`
     
         ## IMGs for appPresentationSection
     
-    metodologiaGreencycle: file(relativePath: {eq: "appPresentationSection/metodologia-greencycle.png" }) {
+        metodologiaGreencycle: file(relativePath: {eq: "appPresentationSection/metodologia-greencycle.png" }) {
             childImageSharp {
           fixed (width: 80) {
             ...GatsbyImageSharpFixed
           }
           }
         }
-    tecnologiaQr: file(relativePath: {eq: "appPresentationSection/tecnologia-qr.png" }) {
+
+        tecnologiaQr: file(relativePath: {eq: "appPresentationSection/tecnologia-qr.png" }) {
             childImageSharp {
           fixed (width: 80) {
             ...GatsbyImageSharpFixed
           }
           }
         }
+
     sistemaIncentivos: file(relativePath: {eq: "appPresentationSection/sistema-incentivos.png" }) {
             childImageSharp {
           fixed (width: 80) {
@@ -351,13 +363,6 @@ export const query = graphql`
           }
           }
         }
-    # app: file(relativePath: {eq: "appPresentationSection/app.png" }) {
-            #   childImageSharp {
-            #     fluid {
-            #         ...GatsbyImageSharpFluid
-          #       }
-          #   }
-          # }
       
           # IMGs for processSection DESKTOP
     descargarAppDesktop: file(relativePath: {eq: "processSection/descargar-app.png" }) {

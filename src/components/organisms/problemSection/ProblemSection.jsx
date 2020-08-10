@@ -19,11 +19,11 @@ const ProblemSection = props => {
                 <div data-sal="fade" data-sal-delay="200" data-sal-easing="ease">
                     <Row className={styles.problemCol}>
                         <Col sm={12} md={7}>
-                            <p className={styles.problemFirstText}>¿SABÍAS QUE ACTUALMENTE EN CABA <strong>SE PRODUCEN 6.000 TN DE RESIDUOS TOTALES</strong> POR MES…</p>
+                            <p className={styles.problemFirstText}>¿SABÍAS QUE ACTUALMENTE EN CABA <strong>SE PRODUCEN 6.000 TN DE RESIDUOS TOTALES</strong> POR DÍA...</p>
                             <p className={styles.problemSecondText}>…Y SOLO EL 8% LOGRA SER RECICLADO?</p>
                             <p className={styles.problemSourceText}>Fuente: Informe de calidad de RSU, CEAMSE-FIUBA, 2015</p>
                         </Col>
-                        <Col sm={12} md={5} className='align-self-center'>
+                        <Col sm={12} md={5}>
                             <div className={styles.imgProblemContainer} data-sal="fade" data-sal-delay="200" data-sal-easing="ease">
                                 <Img className='d-none d-md-flex' fixed={props.composicionResiduosDesktopImg} />
                                 <Img className='d-flex d-md-none' fixed={props.composicionResiduosMobileImg} />
@@ -37,13 +37,13 @@ const ProblemSection = props => {
                     </Row>
                     <Row>
                         <Col sm={12} md={4} style={{ marginBottom: '16px' }}>
-                            <ProblemItem imgSrc={props.procesosIneficientesImg} title='PROCESOS INEFICIENTES' text='Desde el primer hasta el último eslabón de la cadena' />
+                            <ProblemItem imgSrc={props.procesosIneficientesImg} title={`PROCESOS \n INEFICIENTES`} text='Desde el primer hasta el último eslabón de la cadena' />
                         </Col>
                         <Col sm={12} md={4} style={{ marginBottom: '16px' }}>
-                            <ProblemItem imgSrc={props.tasasRechazoImg} title='ALTAS TASAS DE RECHAZO EN PLANTAS' text='Debido a residuos sucios y mal separados, el 46% se rechaza volviendo a los terrenos de rellenos sanitarios.' />
+                            <ProblemItem imgSrc={props.tasasRechazoImg} title={`ALTAS TASAS DE \n RECHAZO EN PLANTAS`} text='El 46% se rechaza volviendo a los terrenos de rellenos sanitarios.' />
                         </Col>
                         <Col sm={12} md={4} style={{ marginBottom: '16px' }}>
-                            <ProblemItem imgSrc={props.culturaReciclajeImg} title='ESCASA CULTURA DEL RECICLAJE' text='Solo 2 de cada 10 personas separa los residuos de manera eficiente' />
+                            <ProblemItem imgSrc={props.culturaReciclajeImg} title={`ESCASA CULTURA \n DEL RECICLAJE`} text='Solo 2 de cada 10 personas separa los residuos de manera eficiente' />
                         </Col>
                     </Row>
                 </div>

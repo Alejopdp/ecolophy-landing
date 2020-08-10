@@ -12,7 +12,7 @@ import Img from "gatsby-image";
 
 const ProblemItem = props => {
     return (
-        <div>
+        <div className={styles.problemItemContainer}>
             <div className={styles.imgContainer}>
                 <Img fixed={props.imgSrc} />
             </div>

@@ -30,13 +30,17 @@
     font-weight: 700;
 }
 
-.invitationText {
+.invitationTextOne, .invitationTextTwo {
     font-family: $secondaryFont;
     color: white;
     text-align: center;
     font-size: 24px;
     font-weight: normal;
     margin: 0px;
+}
+
+.btnSubmitContainer {
+    padding: 0px 0px 0px 16px;
 }
 
 .firstFinalTitle, .secondFinalTitle {
@@ -66,19 +70,40 @@
     justify-content: flex-end;
 }
 
+.sponsorText {
+    font-family: $secondaryFont;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0px;
+    white-space: nowrap;
+    align-self: center;
+}
+
+
+
 @media (max-width: 576px) { 
     .firstTitle {
-        font-size: 24px;
-        margin-bottom: 24px;
+        display: none;
     }
     .secondTitle {
         font-size: 32px;
     }
-    .invitationText {
+    .spamText {
+        display: none;
+    }
+    .invitationTextOne, .invitationTextTwo {
         font-size: 16px;
     }
+    .invitationTextOne {
+        margin-bottom: 16px;
+    }
+    .btnSubmitContainer {
+        padding: 0px;
+    }
     .firstFinalTitle, .secondFinalTitle {
-        font-size: 14px;
+        display:none;
     }
     .ctaContainer {
         padding: 0px 16px;
@@ -98,10 +123,10 @@
         margin-bottom: 32px;
     }
     .secondTitle {
-        font-size: 40px;
+        // font-size: 40px;
     }
-    .invitationText {
-        font-size: 18px;
+    .invitationTextOne, .invitationTextTwo {
+        // font-size: 18px;
     }
     .firstFinalTitle, .secondFinalTitle {
         font-size: 16px;

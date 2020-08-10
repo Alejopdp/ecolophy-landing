@@ -1,5 +1,9 @@
 @import '../../../styles.scss';
 
+.problemItemContainer {
+    padding: 0px 48px;
+}
+
 .title {
     font-family: $primaryFont;
     color: $primaryGreenTone3;
@@ -8,6 +12,7 @@
     text-transform: uppercase;
     font-weight: bold;
     padding: 8px 0px 8px 0px;
+    white-space: pre-wrap;
 }
 
 .text {

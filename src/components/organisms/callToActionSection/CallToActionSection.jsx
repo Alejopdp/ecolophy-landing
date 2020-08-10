@@ -29,8 +29,8 @@ const CallToActionSection = props => {
                         </div>
                         <div>
                             <div>
-                                <p className={styles.invitationText}>Actualmente estamos desarrollando la aplicación.</p>
-                                <p className={styles.invitationText}>¡Dejanos tu email a continuación y te avisaremos cuando esté lista!</p>
+                                <p className={styles.invitationTextOne}>Actualmente estamos desarrollando la aplicación.</p>
+                                <p className={styles.invitationTextTwo}>¡Dejanos tu email a continuación y te avisaremos cuando esté lista!</p>
                             </div>
                             <div>
                                 <Form>
@@ -38,10 +38,10 @@ const CallToActionSection = props => {
                                         <Col xs={12} md={8} style={{ padding: '0px' }}>
                                             <Form.Group controlId="formBasicEmail">
                                                 <Form.Control name="email" value={props.formData.email} onChange={props.handleChange} type="email" placeholder="Ingrese su correo electrónico" style={{ borderRadius: '60px', height: '48px' }} />
-                                                <Form.Text style={{ color: 'white' }}>Quedate tranquilo que no es spam :)</Form.Text>
+                                                <Form.Text className={styles.spamText} style={{ color: 'white' }}>Quedate tranquilo que no es spam :)</Form.Text>
                                             </Form.Group>
                                         </Col>
-                                        <Col xs={12} md={4}>
+                                        <Col xs={12} md={4} className={styles.btnSubmitContainer}>
                                             <CustomButton type='primary' text='¡QUIERO SER PARTE!' disabled={!props.validateEmail()} handleClick={() => props.setModalShow(true)} />
                                         </Col>
                                     </Row>
@@ -53,28 +53,34 @@ const CallToActionSection = props => {
                             <h4 className={styles.secondFinalTitle}>SEAMOS RESPONSABLES.</h4>
                         </div>
                         <div className={styles.footerLogoSocialContainer}>
-                            <Col xs={12} md={5} className={styles.footerLogoCol}>
+                            <Col xs={12} md={4} className={styles.footerLogoCol}>
                                 <Img fixed={props.logoBlancoImg} />
                             </Col>
-                            <Col xs={12} md={7} style={{ padding: '0px', alignSelf: 'center' }}>
+                            <Col xs={12} md={4} className={styles.sponsorCol}>
+                                <div>
+                                    <p className={styles.sponsorText}>Contamos con el apoyo de</p>
+                                    <Img fixed={props.logoUcaImg} />
+                                </div>
+                            </Col>
+                            <Col xs={12} md={4} style={{ padding: '0px', alignSelf: 'center' }}>
                                 <div className={styles.footerSocialDiv}>
                                     <p style={{ color: 'white', margin: '0px' }}>hola@ecolophy.com</p>
                                     <ul className='d-flex align-items-center' style={{ margin: '0px', padding: '0px', listStyle: 'none' }}>
                                         <li>
-                                            <a href='https://www.instagram.com/ecolophy.oficial' target="_blank" title="Contact John Vincent at Facebook" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
+                                            <a href='https://www.instagram.com/ecolophy.oficial' target="_blank" title="Instagram Ecolophy" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
                                                 <FaInstagram size={32} color='white' />
                                             </a>
                                         </li>
                                         <li>
-                                            <a href='https://www.facebook.com/ecolophy/' target="_blank" title="Contact John Vincent at Facebook" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
+                                            <a href='https://www.facebook.com/ecolophy/' target="_blank" title="Facebook Ecolophy" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
                                                 <FaFacebookSquare size={32} color='white' />
                                             </a>
                                         </li>
-                                        {/* <li>
-                                            <a href='www.linkedin.com/' target="_blank" title="Contact John Vincent at AngelList" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
+                                        <li>
+                                            <a href='https://www.linkedin.com/company/ecolophy-oficial' target="_blank" title="Linkedin Ecolophy" rel="noopener noreferrer" style={{ marginLeft: '8px' }}>
                                                 <FaLinkedin size={32} color='white' />
                                             </a>
-                                        </li> */}
+                                        </li>
                                     </ul>
                                 </div>
                             </Col>

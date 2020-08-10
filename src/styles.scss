@@ -5,7 +5,8 @@ $primaryGreenTone3: #7E8E3D;
 $primaryGreenTone4: #616B29;
 $textFirstColor: #707070;
 $textSecondColor: #909090;
-$backgroundColor: #FAFAFA;
+$principalBackgroundColor: #fdfff7;
+$secondaryBackgroundColor: #f8fbef;
 
 // Fonts
 $primaryFont: 'Arvo', sans-serif;
@@ -21,7 +22,7 @@ $secondaryFont: 'Avenir Next LT Pro', sans-serif;
 }
 
 #main-container {
-    background-color: $backgroundColor;
+    background-color: $principalBackgroundColor;
     padding: 0px;
 }
 
@@ -34,7 +35,8 @@ $secondaryFont: 'Avenir Next LT Pro', sans-serif;
     primaryGreenTone4: $primaryGreenTone4;
     textFirstColor: $textFirstColor;
     textSecondColor: $textSecondColor;
-    backgroundColor: $backgroundColor;
+    principalBackgroundColor: $principalBackgroundColor;
+    secondaryBackgroundColor: $secondaryBackgroundColor;
 
     // Fonts
     primaryFont: $primaryFont;
