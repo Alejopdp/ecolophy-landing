@@ -33,19 +33,19 @@ const CallToActionSection = props => {
                                 <p className={styles.invitationTextTwo}>¡Dejanos tu email a continuación y te avisaremos cuando esté lista!</p>
                             </div>
                             <div>
-                                <Form>
-                                    <Row style={{ margin: '40px 0px 0px 0px' }}>
-                                        <Col xs={12} md={8} style={{ padding: '0px' }}>
-                                            <Form.Group controlId="formBasicEmail">
-                                                <Form.Control name="email" value={props.formData.email} onChange={props.handleChange} type="email" placeholder="Ingrese su correo electrónico" style={{ borderRadius: '60px', height: '48px' }} />
-                                                <Form.Text className={styles.spamText} style={{ color: 'white' }}>Quedate tranquilo que no es spam :)</Form.Text>
-                                            </Form.Group>
-                                        </Col>
-                                        <Col xs={12} md={4} className={styles.btnSubmitContainer}>
-                                            <CustomButton type='primary' text='¡QUIERO SER PARTE!' disabled={!props.validateEmail()} handleClick={() => props.setModalShow(true)} />
-                                        </Col>
-                                    </Row>
-                                </Form>
+                                {/* <Form> */}
+                                <Row style={{ margin: '40px 0px 0px 0px' }}>
+                                    <Col xs={12} md={8} style={{ padding: '0px' }}>
+                                        <Form.Group controlId="formBasicEmail">
+                                            <Form.Control name="email" value={props.formData.email} onChange={props.handleChange} type="email" placeholder="Ingrese su correo electrónico" style={{ borderRadius: '60px', height: '48px' }} />
+                                            <Form.Text className={styles.spamText} style={{ color: 'white' }}>Quedate tranquilo que no es spam :)</Form.Text>
+                                        </Form.Group>
+                                    </Col>
+                                    <Col xs={12} md={4} className={styles.btnSubmitContainer}>
+                                        <CustomButton type='primary' text='¡QUIERO SER PARTE!' disabled={!props.validateEmail()} handleClick={() => props.setModalShow(true)} />
+                                    </Col>
+                                </Row>
+                                {/* </Form> */}
                             </div>
                         </div>
                         <div>
@@ -53,16 +53,16 @@ const CallToActionSection = props => {
                             <h4 className={styles.secondFinalTitle}>SEAMOS RESPONSABLES.</h4>
                         </div>
                         <div className={styles.footerLogoSocialContainer}>
-                            <Col xs={12} md={4} className={styles.footerLogoCol}>
+                            <Col xs={{ span: 12, order: 2 }} md={{ span: 4, order: 1 }} className={styles.footerLogoCol}>
                                 <Img fixed={props.logoBlancoImg} />
                             </Col>
-                            <Col xs={12} md={4} className={styles.sponsorCol}>
-                                <div>
+                            <Col xs={{ span: 12, order: 3 }} md={{ span: 4, order: 2 }} className={styles.sponsorCol}>
+                                <div className='d-flex justify-content-center'>
                                     <p className={styles.sponsorText}>Contamos con el apoyo de</p>
                                     <Img fixed={props.logoUcaImg} />
                                 </div>
                             </Col>
-                            <Col xs={12} md={4} style={{ padding: '0px', alignSelf: 'center' }}>
+                            <Col xs={{ span: 12, order: 1 }} md={{ span: 4, order: 3 }} className={styles.socialNetworksCol}>
                                 <div className={styles.footerSocialDiv}>
                                     <p style={{ color: 'white', margin: '0px' }}>hola@ecolophy.com</p>
                                     <ul className='d-flex align-items-center' style={{ margin: '0px', padding: '0px', listStyle: 'none' }}>

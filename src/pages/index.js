@@ -200,7 +200,7 @@ const Home = ({ data }) => {
           formData={formData}
           handleChange={handleChange}
           validateEmail={validateEmail}
-          logoUcaImg={data.logoUca.childImageSharp.fixed}
+          logoUcaImg={data.logoUcaDos.childImageSharp.fixed}
         />
       </Container>
       <CustomModal
@@ -248,11 +248,11 @@ export const query = graphql`
       #     }
       #   }
 
-        logoUca: file(relativePath: {eq: "general/logo-uca-dos.png" }) {
-      childImageSharp {
-          fixed (height: 57) {
-            ...GatsbyImageSharpFixed
-          }
+        logoUcaDos: file(relativePath: {eq: "general/logo-uca-dos.png"}) {
+          childImageSharp {
+            fixed (height: 32) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
 

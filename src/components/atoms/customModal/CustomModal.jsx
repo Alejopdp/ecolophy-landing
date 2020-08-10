@@ -43,7 +43,7 @@ const CustomModal = props => {
                         onChange={(selected) => props.handleOnChangeAutocomplete(selected[0])}
                         onInputChange={props.handleOnInputChangeAutocomplete}
                         options={barrios}
-                        emptyLabel='No se encontraron sugerencias de barrios.'
+                        emptyLabel='No se encontraron sugerencias de barrios, de todos modos podés ingresar el que quieras...'
                         className={styles.inputClass}
                     />
                 </Form.Group>
@@ -60,7 +60,7 @@ const CustomModal = props => {
                 <img className={styles.thanksImg} src="https://i.ibb.co/j5QJS3F/confirm.png" alt="confirm" border="0" />
             </div>
             <h4 className={styles.thanksSubtitle}>Pronto te tendremos novedades del lanzamiento de Ecolophy</h4>
-            <p className={styles.contactText}>Si te querés comunicar directamente con nosotros, puedes hacerlo por mail a hola@ecolophy.com</p>
+            <p className={styles.contactText}>Si te querés comunicar directamente con nosotros, podés hacerlo por mail a hola@ecolophy.com</p>
             <div style={{ marginTop: '24px' }}>
                 <CustomButton type='primary' text='VOLVER' handleClick={props.handleCloseForm} />
             </div>
