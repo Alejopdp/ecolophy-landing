@@ -20,28 +20,28 @@ const ProcessSection = props => {
             imgSrcDesktop: props.descargarAppDesktopImg,
             imgSrcMobile: props.descargarAppMobileImg,
             title: 'DESCARGÁ LA APP',
-            text: 'Desde Play Store o App Store, y recibí los stickers QR'
+            text: 'Desde Play Store o App Store, y recibí los stickers QR directamente en tu domicilio'
         },
         {
             stepNumber: 2,
             imgSrcDesktop: props.comenzarReciclarDesktopImg,
             imgSrcMobile: props.comenzarReciclarMobileImg,
             title: 'COMENZÁ A RECICLAR',
-            text: 'Separá tus residuos limpios y secos en un bolsa separada del resto'
+            text: 'Separá tus residuos limpios y secos en una bolsa separada del resto. No te preocupes, te indicaremos la forma correcta de hacerlo'
         },
         {
             stepNumber: 3,
             imgSrcDesktop: props.stickerQrDesktopImg,
             imgSrcMobile: props.stickerQrMobileImg,
-            title: 'STICKER QR',
-            text: 'Una vez llenada la bolsa, pegalo para comenzar la etapa de solicitud'
+            title: 'PEGÁ EL STICKER QR',
+            text: 'Una vez llenada la bolsa, pegá el sticker QR a la bolsa para comenzar la etapa de solicitud'
         },
         {
             stepNumber: 4,
             imgSrcDesktop: props.solicitudRetiroDesktopImg,
             imgSrcMobile: props.solicitudRetiroMobileImg,
-            title: 'SOLICITUD DE RETIRO GRATIS',
-            text: 'Luego de escanear el código QR, solicitá gratis el retiro de tu bolsa y en el dia nosotros la pasaremos a buscar'
+            title: 'SOLICITÁ TU RETIRO GRATIS',
+            text: 'Luego de escanear el código QR, solicitá gratis el retiro de tu bolsa y nosotros la pasaremos a buscar en el día'
         },
         {
             stepNumber: 5,

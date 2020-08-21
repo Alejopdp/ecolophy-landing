@@ -1,15 +1,14 @@
 // Baseline & Utils
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './callToActionSection.module.scss'
 
 
 // Internal Components
-import CustomModal from '../../atoms/customModal/CustomModal';
 import CtaBgImage from '../../molecules/ctaBgImage/CtaBgImage';
 import CustomButton from '../../atoms/customButton/CustomButton';
 
 // External Components
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 import Img from "gatsby-image";
 
 // Icons

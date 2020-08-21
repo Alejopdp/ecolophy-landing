@@ -2,10 +2,6 @@
 import React from 'react'
 import styles from './customButton.module.scss'
 
-// React Bootstrap Components
-import { Button } from 'react-bootstrap';
-
-
 const CustomButton = props => {
     let classes;
     switch (props.type) {

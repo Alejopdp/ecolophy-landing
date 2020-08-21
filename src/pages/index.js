@@ -1,6 +1,5 @@
 // Baseline & Utils
 import React, { useState } from "react"
-import globalStyles from '../styles.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { graphql } from "gatsby"
 import sal from 'sal.js'
@@ -13,13 +12,13 @@ import ProblemSection from '../components/organisms/problemSection/ProblemSectio
 import BrandSection from '../components/organisms/brandSection/BrandSection';
 import AppPresentationSection from '../components/organisms/appPresentationSection/AppPresentationSection';
 import ProcessSection from '../components/organisms/processSection/ProcessSection';
-import PartnersSection from '../components/organisms/partnersSection/PartnersSection';
+// import PartnersSection from '../components/organisms/partnersSection/PartnersSection';
 import CallToActionSection from '../components/organisms/callToActionSection/CallToActionSection';
 import StickyHeader from '../components/molecules/stickyHeader/StickyHeader';
 import CustomModal from '../components/atoms/customModal/CustomModal';
 
 // External Components
-import { Container, Form, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { Helmet } from "react-helmet"
 
 
@@ -405,35 +404,36 @@ export const query = graphql`
                   # IMGs for processSection Mobile
     descargarAppMobile: file(relativePath: {eq: "processSection/descargar-app.png" }) {
             childImageSharp {
-          fixed (width: 166) {
+              # fixed (width: 166) {
+                fixed (width: 94, height: 94) {
             ...GatsbyImageSharpFixed
           }
           }
         }
     comenzarReciclarMobile: file(relativePath: {eq: "processSection/comenzar-reciclar.png" }) {
             childImageSharp {
-              fixed (width: 166) {
+              fixed (width: 94, height: 94) {
             ...GatsbyImageSharpFixed
           }
           }
         }
     stickerQrMobile: file(relativePath: {eq: "processSection/sticker-qr.png" }) {
             childImageSharp {
-              fixed (width: 166) {
+              fixed (width: 94, height: 94) {
             ...GatsbyImageSharpFixed
           }
           }
         }
     solicitudRetiroMobile: file(relativePath: {eq: "processSection/solicitud-retiro.png" }) {
             childImageSharp {
-              fixed (width: 166) {
+              fixed (width: 94, height: 94) {
             ...GatsbyImageSharpFixed
           }
           }
         }
     recibiEcopointsMobile: file(relativePath: {eq: "processSection/recibi-ecopoints.png" }) {
             childImageSharp {
-              fixed (width: 166) {
+              fixed (width: 94, height: 94) {
             ...GatsbyImageSharpFixed
           }
           }

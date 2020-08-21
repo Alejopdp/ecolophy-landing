@@ -26,7 +26,7 @@ const ProcessItemMobile = props => {
         <>
 
             <Row style={{ marginBottom: '32px' }}>
-                <Col xs={4}>
+                <Col xs={4} className={styles.imgCol}>
                     <div className={styles.imgContainer}>
                         <Img fixed={props.imgSrcMobile} />
                     </div>

@@ -36,7 +36,7 @@ const AppPresentationSection = props => {
                         </Col>
                         <Col xs={12} md={4} className={styles.appDescriptionItemContainer} >
                             <AppDescriptionItem imgSrc={props.tecnologiaQrImg} title='TECNOLOGÍA QR' text='Logrando una trazabilidad perfecta entre usuario y residuo.' />
-                            <AppDescriptionItem imgSrc={props.mundoEcolophyImg} title='MUNDO ECOLOPHY' text='Se parte de este cambio.' />
+                            <AppDescriptionItem imgSrc={props.mundoEcolophyImg} title='MUNDO ECOLOPHY' text='Sé parte de este cambio.' />
                         </Col>
                     </Row>
                 </div>
