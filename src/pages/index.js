@@ -145,6 +145,10 @@ const Home = ({ data }) => {
         <title>Ecolophy - La filosofía del reciclaje</title>
         <link rel="icon" href={favicon} />
         <meta name="description" content="Con Ecolophy llega una nueva forma de reciclar que nos beneficie a todos." />
+        <meta property='og:title' content='Ecolophy - Llegó una nueva forma de reciclar'></meta>
+        <meta property='og:description' content='¿Te imaginás cambiar tus residuos por beneficios exclusivos? Desde la App de Ecolophy podrás hacer eso y mucho más...'></meta>
+        <meta property='og:image' content='https://i.ibb.co/HBBdT54/logo-Ecolophy.jpg'></meta>
+        <meta property='og:url' content='https://ecolophy.com'></meta>
       </Helmet>
       <Container fluid id='main-container'>
         <HeaderSection
@@ -255,9 +259,9 @@ export const query = graphql`
           }
         }
 
-        isotipo: file(relativePath: {eq: "general/isotipo.png" }) {
+        isotipo: file(relativePath: {eq: "general/logoBlancoCuadrado.png" }) {
       childImageSharp {
-          fixed (height: 264) {
+          fixed (height: 220) {
             ...GatsbyImageSharpFixed
           }
           }
